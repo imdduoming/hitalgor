@@ -15,5 +15,5 @@ for i in test:
         answer.append(0)
     else:
         answer.append(1)
-for i in answer:\
+for i in answer:
     print(i,end=' ')

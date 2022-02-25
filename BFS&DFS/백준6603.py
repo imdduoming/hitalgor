@@ -1,5 +1,5 @@
 #로또
-#BFS/DFS
+#BFS&DFS/DFS
 def dfs(level, s, visited,answer):
     if len(answer) == 6:
         for i in answer:

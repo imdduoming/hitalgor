@@ -9,7 +9,7 @@ def solution(begin, target, words):
         return 0
 
     while True:
-        for i in range(0, len(queue)): #한 단계씩 BFS
+        for i in range(0, len(queue)): #한 단계씩 BFS&DFS
             now = queue.popleft()
 
             if now == target: #이번 단계에서 찾을 경우
