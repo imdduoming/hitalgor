@@ -34,7 +34,7 @@ def bfs(a, b):
 
 result = 0
 while 1:
-    visited = [[0] * (n + 1) for _ in range(n + 1)]
+    visited = [[0] * (n) for _ in range(n)]
     flag = 0
     for i in range(n):
         for j in range(n):
@@ -45,9 +45,9 @@ while 1:
                 if len(country) > 1:
                     flag = 1
                     # 연합을 이루고 있는 각 칸의 인구수는 (연합의 인구수) / (연합을 이루고 있는 칸의 개수)가 된다. 편의상 소수점은 버린다.
-                    print(sum([graph[x][y] for x, y in country]))
-                    number = sum([graph[x][y] for x, y in country]) // len(country)
 
+                    number = sum([graph[x][y] for x, y in country]) // len(country)
+                    print(number)
                     for x, y in country:
                         graph[x][y] = number
 

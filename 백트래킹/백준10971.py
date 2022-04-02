@@ -24,11 +24,11 @@ def find(start,now,idx,dist):
             find(start,i,idx+1,dist+route[now][i])
             visited[i]=-1
 
-
+visited=[-1 for i in range(N)]
 for i in range(0,N):
-    visited = [-1 for i in range(N)]
     visited[i]=1
     find(i,i,0,0)
+    visited[i]=-1
 
 
 print(answer)
