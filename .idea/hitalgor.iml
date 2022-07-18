@@ -2,9 +2,31 @@
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <excludeFolder url="file://$MODULE_DIR$/venv" />
+      <sourceFolder url="file://$MODULE_DIR$/BFS&amp;DFS" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Codingtest" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/구현" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/그래프" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/그리디" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/기출_삼성" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/기출_카카오" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/다이나믹프로그래밍" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/문자열" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/백트래킹" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/스택&amp;큐" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/이분탐색" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/최단거리" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/트리" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/해시" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/힙" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="TemplatesService">
+    <option name="TEMPLATE_FOLDERS">
+      <list>
+        <option value="$MODULE_DIR$" />
+      </list>
+    </option>
   </component>
 </module>
