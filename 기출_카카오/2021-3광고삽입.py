@@ -45,5 +45,3 @@ def solution(play_time, adv_time, logs):
             answer = i-adv_time+1
 
     return int_to_str(answer)
-
-
