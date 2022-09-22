@@ -1,3 +1,5 @@
+# 백준 음식물 피하기
+# 실버 1
 N,M,K = map(int,input().split())
 arr=[[0 for i in range(M+1)]for j in range(N+1)]
 for i in range(K):
