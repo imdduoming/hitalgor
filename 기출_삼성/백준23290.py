@@ -18,8 +18,8 @@ def move_fish():
                     if (nx, ny) != shark and 0 <= nx < 4 and 0 <= ny < 4 and not smell[nx][ny]:
                         res[nx][ny].append(i)
                         break
-                else:
-                    res[x][y].append(d)
+                    else:
+                        res[x][y].append(d)
     return res
 
 def dfs(x, y, dep, cnt, visit):
