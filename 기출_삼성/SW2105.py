@@ -9,17 +9,25 @@ def make_route(sx,sy,x,y,dir,cnt,road,visited):
         # print('total',total)
         ans=max(ans,total)
         return
-    if x<0 or x>=N or y<0 or y>=N:
-        return
-    if visited[road[x][y]]:
-        return
-    else:
+    if 0<=x<N and 0<=y<N and not visited[road[x][y]]:
         visited[road[x][y]]=1
-        # print('visited',visited)
         make_route(sx,sy,x+dx[dir],y+dy[dir],dir,cnt+1,road,visited) #방향 그대로
         if dir+1<4:
             make_route(sx,sy,x+dx[dir+1],y+dy[dir+1],dir+1,cnt+1,road,visited) #방향 꺾기
         visited[road[x][y]]=0
+    else:
+        return
+    # if x<0 or x>=N or y<0 or y>=N:
+    #     return
+    # if visited[road[x][y]]:
+    #     return
+    # else:
+    #     visited[road[x][y]]=1
+    #     # print('visited',visited)
+    #     make_route(sx,sy,x+dx[dir],y+dy[dir],dir,cnt+1,road,visited) #방향 그대로
+    #     if dir+1<4:
+    #         make_route(sx,sy,x+dx[dir+1],y+dy[dir+1],dir+1,cnt+1,road,visited) #방향 꺾기
+    #     visited[road[x][y]]=0
 
 
 
