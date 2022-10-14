@@ -25,10 +25,10 @@ def init_info(space):
         if change_dir==2:
             dist-=1
             change_dir=0
-
+        # print('cnt',cnt)
         if cnt==0:
             break
-
+    # print('길이',len(ball_cnt))
     return ball_cnt , loc_dict , num_dict
 
 def move_ball(ball_cnt,cnt): #구슬정리
@@ -41,7 +41,8 @@ def move_ball(ball_cnt,cnt): #구슬정리
     if len(new_ball_cnt) < cnt :
         need_cnt = cnt - len(new_ball_cnt)
         new_ball_cnt += [0] * need_cnt
-
+    # print('구슬정리 후',new_ball_cnt)
+    # print('길이',len(new_ball_cnt))
     return new_ball_cnt
 
 def throw_ice(dir,dist,sx,sy,ball_cnt): #얼음던지기
@@ -105,18 +106,22 @@ def make_group(ball_cnt,leng):
                         cnt+=1
                     else:
                         break
-
+            print('i',cnt)
             new_ball.append(cnt)
             new_ball.append(target)
+            # print('ball_cnt',ball_cnt)
             if len(new_ball) == (N**2):
                 end = True
                 break
 
     if end ==False:
-
+        # print('길이 짧은 경우')
+        # print('new_ball 길이',len(new_ball))
+        # print('new_ball',new_ball)
         need = leng-len(new_ball)
         new_ball += [0]*need
-
+        # print('new_ball 후 길이',len(new_ball))
+        # print('new_ball',new_ball)
     return new_ball
 
 
@@ -131,7 +136,9 @@ for i in range(M):
     dir ,dist = map(int,input().split())
     command.append((dir,dist))
 ball_cnt, loc_dict , num_dict = init_info(space)
-
+# print('ball_cnt',ball_cnt)
+# print('loc',loc_dict)
+# print('num',num_dict)
 sx,sy= (N-1)//2 , (N-1)//2
 pops=[0,0,0,0]
 for comm in command:
@@ -142,10 +149,14 @@ for comm in command:
     ball_cnt=move_ball(ball_cnt,N**2)
     pops,ball_cnt = ball_pop(pops,N**2,ball_cnt)
     ball_cnt= make_group(ball_cnt,N**2)
+    # print('ball_cnt',ball_cnt)
 
 total=0
+# print(pops)
 for i in range(1,4):
     total+= pops[i]*i
 print(total)
+
+
 
 
