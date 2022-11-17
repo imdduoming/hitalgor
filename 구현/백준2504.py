@@ -1,22 +1,32 @@
 # 백준 자료구조 구현 실버 1 괄호의 값
-def solution(logs):
-    answer = []
-    print(logs)
-    for log in logs:
-        date,time=log.split()
-
-    return answer
-
-solution("2019/05/01 00:59:19"
-         "2019/06/01 01:35:20"
-         "2019/08/01 02:01:22"
-         "2019/08/01 02:01:23"
-         "2019/08/02 03:02:35"
-         "2019/10/03 04:05:40"
-         "2019/10/04 06:23:10"
-         "2019/10/01 08:23:20"
-         "2019/10/01 08:42:24"
-         "2019/10/01 08:43:26"
-         "2019/11/01 08:43:29"
-         "2019/11/01 10:19:02"
-         "2019/12/01 11:23:10")
+s=list(input())
+res=1
+stack=[]
+result=0
+for i in range(len(s)):
+    if s[i]=='(':
+        res*=2
+        stack.append(s[i])
+    elif s[i]=='[':
+        res*=3
+        stack.append(s[i])
+    elif s[i]==')':
+        if not stack or stack[-1]!='(':
+            result=0
+            break
+        elif s[i-1]=='(':
+            result+=res
+        res=res//2
+        stack.pop()
+    elif s[i]==']':
+        if not stack or stack[-1]!='[':
+            result=0
+            break
+        elif s[i-1]=='[':
+            result+=res
+        res=res//3
+        stack.pop()
+if stack:
+    print(0)
+else:
+    print(result)
